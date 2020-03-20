@@ -1,4 +1,6 @@
 from PyCronVisualizer.file_parser import FileParser
+from PyCronVisualizer.cron_job import CronJob
+import json
 
 
 class JsonFileParser(FileParser):
@@ -14,4 +16,10 @@ class JsonFileParser(FileParser):
 			Returns:
 				- CronTab dictionary
 		"""
-        pass
+        try:
+            data = json.load(self.file)
+
+            cron_jobs = [CronJob(**i) for i in data]
+
+        except Exception as e:
+            raise e

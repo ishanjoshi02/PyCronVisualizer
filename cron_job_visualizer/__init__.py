@@ -1,6 +1,5 @@
 from PyCronVisualizer.cron_job import CronJob
 
-
 class CronJobVisualizer:
     """
 		This class is responsible for actually visualizing the Cron Jobs.
@@ -17,9 +16,14 @@ class CronJobVisualizer:
 		"""
         self.cron_jobs = cron_jobs
 
-    def visualize(self):
+    def visualize(self, save_as=None):
         """
 			Create the view of the CronJobs.
 
+			Arguments -
+				- save_as - The path file to store the visualization.
+					`str`
+
 		"""
-        pass
+		pass
+
